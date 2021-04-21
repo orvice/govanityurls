@@ -31,6 +31,11 @@ func main() {
 	default:
 		log.Fatal("usage: govanityurls [CONFIG]")
 	}
+
+	if os.Getenv("CONFIG_PATH") != ""{
+		configPath = os.Getenv("CONFIG_PATH")
+	}
+
 	vanity, err := ioutil.ReadFile(configPath)
 	if err != nil {
 		log.Fatal(err)
