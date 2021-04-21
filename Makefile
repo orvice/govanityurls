@@ -14,5 +14,5 @@ test: ## test
 
 .PHONY: build
 build: ## build
-	CGO_ENABLED=0 go build -o $(APP_BINARY) -v main.go
+	CGO_ENABLED=0 go build -o $(APP_BINARY) 
 
